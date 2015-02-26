@@ -18,9 +18,9 @@ public class MongoDBJDBC {
 		try {
 		MongoClient client = new MongoClient ("10.0.0.55", 27017);
 		DB db= client.getDB("mydb");
-		boolean auth= db.authenticate("rajesh", "Chicago2014".toCharArray()) ;
+		boolean auth= db.authenticate("username", "password".toCharArray()) ;
 		
-		  // MongoClientURI uri  = new MongoClientURI("mongodb://rajesh:Chicago2014@10.0.0.55:27017/mydb"); 
+		  // MongoClientURI uri  = new MongoClientURI("mongodb://username:password@ip_address:port/collection_name"); 
 	      // client = new MongoClient(uri);
 	      // DB db = client.getDB(uri.getDatabase());
 		 System.out.println("connected to mydb data base -->> " + db.getName());
